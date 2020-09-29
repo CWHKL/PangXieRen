@@ -15,6 +15,8 @@ public class Follow : MonoBehaviour
     public GameObject Foot_L_bone;
     public GameObject Foot_R_bone;
     public GameObject Head_bone;
+
+    public GameObject Mcursor;
     // Use this for initialization
     void Start()
     {
@@ -53,7 +55,8 @@ public class Follow : MonoBehaviour
 
         if (Input.GetMouseButton(0))    //如果按下鼠标左键
         {
-            Hand_L.transform.Translate(Input.mousePosition);
+            //Hand_L.transform.Translate(Input.mousePosition);
+            Hand_L.transform.Translate(Mcursor.transform.position);
         }
         else if (Input.GetKeyDown(KeyCode.Z))    //如果按下z
         {
@@ -61,7 +64,7 @@ public class Follow : MonoBehaviour
         }
         else
         {
-
+            //Hand_L.transform.Translate(Hand_L_bone.transform.position);
         }
         //else
         //{
